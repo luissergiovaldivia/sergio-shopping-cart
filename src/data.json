@@ -6,7 +6,7 @@
         "image":"/imagen/dress1-2.jpg",
         "description": "about dress 1",
         "price": 19.00,
-        "availableSize":["XS", "S","M","L","XL", "XXL" ]       
+        "availableSizes":["XS", "S","M","L","XL", "XXL" ]       
         
          },
 
@@ -14,54 +14,54 @@
         "_id":"dress2",
         "title":"Dress 2",
         "image":"/imagen/dress2-2.jpg",
-        "description": "about dress 1",
+        "description": "about dress 2",
         "price": 21.5,
-        "availableSize":["XS", "S","M","L"]       
+        "availableSizes":["XS", "S","M","L"]       
         
          },
          {
         "_id":"dress3",
         "title":"Dress 3",
         "image":"/imagen/dress3-2.jpg",
-        "description": "about dress 1",
+        "description": "about dress 3",
         "price": 18.75,
-        "availableSize":["XS", "S","M", "XXL"  ]       
+        "availableSizes":["XS", "S","M", "XXL"  ]       
         
          },
          {
         "_id":"dress4",
         "title":"Dress 4",
         "image":"/imagen/dress4-2.jpg",
-        "description": "about dress 1",
+        "description": "about dress 4",
         "price": 22.25,
-        "availableSize":["XS","L","XL", "XXL"  ]       
+        "availableSizes":["XS","L","XL", "XXL"  ]       
         
          },
          {
         "_id":"dress5",
         "title":"Dress 5",
         "image":"/imagen/dress5-2.jpg",
-        "description": "about dress 1",
+        "description": "about dress 6",
         "price": 23.00,
-        "availableSize":["M","L","XL", "XXL" ]       
+        "availableSizes":["M","L","XL", "XXL" ]       
         
          },
          {
         "_id":"dress6",
         "title":"Dress 6",
         "image":"/imagen/dress6-2.jpg",
-        "description": "about dress 1",
+        "description": "about dress 6",
         "price": 22.75,
-        "availableSize":[ "S","M","L","XL" ]       
+        "availableSizes":[ "S","M","L","XL" ]       
         
          },
          {
         "_id":"dress7",
         "title":"Dress 7",
         "image":"/imagen/dress7-2.jpg",
-        "description": "about dress 1",
+        "description": "about dress 7",
         "price": 24.00,
-        "availableSize":[ "S","L","XL", "XXL"  ]       
+        "availableSizes":[ "S","L","XL", "XXL"  ]       
         
          }
 
