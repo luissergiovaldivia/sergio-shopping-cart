@@ -1,7 +1,7 @@
 import { ADD_TO_CART, REMOVE_FROM_CART } from "../types";
 
-export const addToCart = (items, product) => (dispatch) => {
-  const cartItems = items.slice();
+export const addToCart = (product) => (dispatch, getState) => {
+  const cartItems = getState().cart.cartItems.slice();
   let alreadyExists = false;
   cartItems.forEach((x) => {
     if (x._id === product._id) {
@@ -20,17 +20,16 @@ export const addToCart = (items, product) => (dispatch) => {
     payload: { cartItems },
   });
 
-  localStorage.setItem(" cartitems", JSON.stringify(cartItems));
+  localStorage.setItem(" cartItems", JSON.stringify(cartItems));
 };
 
-export const removeFromCart = (items, product) => (dispatch) => {
-    const cartItems = items.slice().filter(
-        x => x._id !== product._id
-    );
-    dispatch({
-        type: REMOVE_FROM_CART,
-        payload: {cartItems}
-    });
-    localStorage.setItem(JSON.stringify(cartItems));
-
-} 
+export const removeFromCart = (product) => (dispatch, getState) => {
+  const cartItems = getState().cart.cartItems
+    .slice()
+    .filter((x) => x._id !== product._id);
+  dispatch({
+    type: REMOVE_FROM_CART,
+    payload: { cartItems },
+  });
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+};
