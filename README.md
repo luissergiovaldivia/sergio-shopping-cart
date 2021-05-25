@@ -43,3 +43,31 @@
     21.update task and branch
 
 # Step 14 Create Order
+    1.Create Order
+    2.Backend
+    3.server.js
+    4.create order modal
+    5.get /api/orders
+    6.post /api/orders
+    7.delete /api/orders/:id
+    8.Frontend
+    9.create types
+    10.types.js
+    11.CLEAR_ORDER, CLEAR_CART, CREATE_ORDER
+    12.create actions
+    13.actions/orderActions.js
+    14.createOrder(order)
+    15.clearOrder()
+    16.create reducers
+    17.reducers/orderReducers.js
+    18.case CREATE_ORDER
+    19.case CLEAR_ORDER
+    20.Update Cart Component
+    21.components/Cart.js
+    22.connect order, createOrder, clearOrder
+    23.form onSubmit={this.createOrder}
+    24.createOrder() this.props.createOrder(order)
+    25.closeModal() this.props.clearOrder()
+    26.render()
+    27.const { cartItems, order } = this.props;
+    28.{order && (}
