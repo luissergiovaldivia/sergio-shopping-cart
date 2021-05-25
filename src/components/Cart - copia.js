@@ -21,7 +21,6 @@ class Cart extends Component {
   }
   handleInput = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-    
   };
 
   createOrder = (e) => {
@@ -31,9 +30,8 @@ class Cart extends Component {
       email: this.state.email,
       address: this.state.address,
       cartItems: this.props.cartItems,
-      total: this.props.cartItems.reduce((a, c) => a + c.price * c.count, 0)
+      total: this.props.cartItems.reduce((a, c) => (a + c.price * c.count, 0))
     };
-    
     this.props.createOrder(order);
   };
   		closeModal = () => {
@@ -41,10 +39,10 @@ class Cart extends Component {
 		  }
 
   render() {
-    const { cartItems, order } = this.props; 
+    const { cartItems, order } = this.props;
     return (
       <div>
-        
+        <div>
           {cartItems.length === 0 ? (
             <div className=" cart cart-header"> Cart is empty</div>
           ) : (
@@ -52,7 +50,7 @@ class Cart extends Component {
               You have {cartItems.length} in the cart{" "}
             </div>
           )}
-        
+        </div>
         {order && (
           <Modal
 			isOpen = {true}
@@ -62,7 +60,7 @@ class Cart extends Component {
               <button className=" close-modal" onClick={this.closeModal}>
                 x
               </button>
-              <div className="order-details">
+              <div className="order-details"></div>
               <h3 className="success-message">Your order has been placed.</h3>
               <h2>Order {order._id}</h2>
               <ul>
@@ -78,14 +76,9 @@ class Cart extends Component {
                   <div>Address:</div>
                   <div>{order.address}</div>
                 </li>
-				<li>
-                    <div>Date:</div>
-                    <div>{order.createdAt}</div>
-                  </li>
                 <li>
                   <div>Total:</div>
-                
-				  <div>{formatCurrency(order.total)}</div>
+                  <div>{formatCurrency(order.total)}</div>
                 </li>
                 <li>
                   <div>Cart Items:</div>
@@ -98,7 +91,6 @@ class Cart extends Component {
                   </div>
                 </li>
               </ul>
-			  </div>
             </ZOOM>
           </Modal>
         )}
@@ -138,7 +130,7 @@ class Cart extends Component {
                       cartItems.reduce((a, c) => a + c.price * c.count, 0)
                     )}
                   </div>
-                
+                </div>
                 <button
                   onClick={() => {
                     this.setState({ showCheckout: true });
@@ -148,8 +140,6 @@ class Cart extends Component {
                   Proceed{" "}
                 </button>
               </div>
-			  </div>
-			  
               {this.state.showCheckout && (
                 <Fade right cascade>
                   <div className="cart">
@@ -176,7 +166,7 @@ class Cart extends Component {
                         <li>
                           <label>Address</label>
                           <input
-                            name="address"
+                            name="adress"
                             type="text"
                             required
                             onChange={this.handleInput}
@@ -192,11 +182,9 @@ class Cart extends Component {
                   </div>
                 </Fade>
               )}
-			  </div>
-            			
+            </div>
           )}
-		  </div>
-    
+        </div>
       </div>
     );
   }
